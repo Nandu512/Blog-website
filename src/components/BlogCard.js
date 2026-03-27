@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogCard = ({ blog, onReadMore }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300 flex flex-col h-full">
       
       <img
         src={blog.image}
@@ -10,7 +10,7 @@ const BlogCard = ({ blog, onReadMore }) => {
         className="w-full h-52 object-cover"
       />
 
-      <div className="p-5">
+      <div className="p-5 flex flex-col flex-grow">
         <h2 className="text-xl font-semibold mb-2 text-gray-800">
           {blog.title}
         </h2>
@@ -26,7 +26,7 @@ const BlogCard = ({ blog, onReadMore }) => {
 
         <button
           onClick={() => onReadMore(blog.id)}
-          className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+          className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition mt-auto"
         >
           Read More
         </button>

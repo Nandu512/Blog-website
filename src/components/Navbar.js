@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -11,12 +11,18 @@ const Navbar = () => {
           MyBlog
         </h1>
 
-        <Link
+        <NavLink
           to="/"
-          className="text-gray-700 hover:text-blue-500 font-medium"
+          className={({ isActive }) => 
+            `font-medium transition ${
+              isActive 
+                ? "text-blue-600 border-b-2 border-blue-600 pb-1" 
+                : "text-gray-700 hover:text-blue-500"
+            }`
+          }
         >
           Blogs
-        </Link>
+        </NavLink>
 
       </div>
 
