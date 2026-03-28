@@ -1,10 +1,9 @@
-import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import blogs from "../data/blogs";
 
 const BlogDetail = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+  
 
   const blog = blogs.find((b) => b.id === parseInt(id));
 
