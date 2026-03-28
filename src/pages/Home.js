@@ -17,11 +17,11 @@ const Home = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 animate-gradient-x">
 
       <div className="max-w-6xl mx-auto px-4 py-8">
 
-        <h1 className="text-3xl font-bold mb-6 text-gray-800">
+        <h1 className="text-3xl font-bold mb-6 text-gray-800 opacity-0 animate-fade-in-up">
           Latest Blogs
         </h1>
 
@@ -31,18 +31,24 @@ const Home = () => {
           placeholder="Search blogs..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full mb-8 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full mb-8 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 opacity-0 animate-fade-in-up"
+          style={{ animationDelay: '100ms' }}
         />
 
         {/* Grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {filteredBlogs.length > 0 ? (
-            filteredBlogs.map((blog) => (
-              <BlogCard
-                key={blog.id}
-                blog={blog}
-                onReadMore={handleReadMore}
-              />
+            filteredBlogs.map((blog, index) => (
+              <div 
+                key={blog.id} 
+                className="opacity-0 animate-fade-in-up" 
+                style={{ animationDelay: `${200 + index * 100}ms` }}
+              >
+                <BlogCard
+                  blog={blog}
+                  onReadMore={handleReadMore}
+                />
+              </div>
             ))
           ) : (
             <p className="text-gray-500 col-span-full text-center">

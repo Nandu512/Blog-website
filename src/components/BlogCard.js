@@ -2,12 +2,15 @@ import React from "react";
 
 const BlogCard = ({ blog, onReadMore }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300 flex flex-col h-full">
-      
+    <div
+      onClick={() => onReadMore(blog.id)}
+      className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full cursor-pointer"
+    >
+
       <img
         src={blog.image}
         alt={blog.title}
-        className="w-full h-52 object-cover"
+        className="w-full h-52 object-cover transform group-hover:scale-110 transition-transform duration-500"
       />
 
       <div className="p-5 flex flex-col flex-grow">
@@ -26,7 +29,7 @@ const BlogCard = ({ blog, onReadMore }) => {
 
         <button
           onClick={() => onReadMore(blog.id)}
-          className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition mt-auto"
+          className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-all duration-300 mt-auto group-hover:bg-blue-600 group-hover:shadow-md"
         >
           Read More
         </button>

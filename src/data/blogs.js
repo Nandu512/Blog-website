@@ -1,3 +1,4 @@
+import blog4 from "../images/blog4.jpg"
 const blogs = [
   {
     id: 1,
@@ -24,8 +25,8 @@ Start small by building simple projects like a personal portfolio, then graduall
     id: 2,
     title: "React Basics Explained",
     description: "Understand the core concepts of React easily.",
-    image: "https://picsum.photos/400/251",
-    author: "John Doe",
+    image: blog4,
+    author: "Rahul",
     date: "2026-03-26",
     content: `
 React is a popular JavaScript library used for building user interfaces, especially single-page applications.
@@ -44,7 +45,7 @@ By learning React, you can build fast, scalable, and maintainable web applicatio
     title: "Understanding Tailwind CSS",
     description: "Learn how Tailwind makes styling faster and easier.",
     image: "https://picsum.photos/400/252",
-    author: "Jane Smith",
+    author: "Sachin",
     date: "2026-03-25",
     content: `
 Tailwind CSS is a utility-first CSS framework that allows you to style your application directly in your HTML or JSX.
@@ -83,7 +84,7 @@ These features help you write cleaner and more efficient code.
     title: "Why Learn Responsive Web Design",
     description: "Make your websites look great on all devices.",
     image: "https://picsum.photos/400/254",
-    author: "Emily",
+    author: "Tony",
     date: "2026-03-23",
     content: `
 Responsive web design ensures that your website works well on mobile, tablet, and desktop devices.
@@ -102,7 +103,7 @@ A responsive design improves user experience and boosts your website’s perform
     title: "How to Become a Frontend Developer",
     description: "Step-by-step roadmap to becoming a frontend developer.",
     image: "https://picsum.photos/400/255",
-    author: "Michael",
+    author: "Nandu",
     date: "2026-03-22",
     content: `
 Becoming a frontend developer requires learning both technical skills and practical experience.
