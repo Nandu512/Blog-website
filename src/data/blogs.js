@@ -1,4 +1,3 @@
-import blog4 from "../images/blog4.jpg"
 const blogs = [
   {
     id: 1,
@@ -25,7 +24,7 @@ Start small by building simple projects like a personal portfolio, then graduall
     id: 2,
     title: "React Basics Explained",
     description: "Understand the core concepts of React easily.",
-    image: blog4,
+    image:"https://picsum.photos/400/251",
     author: "Rahul",
     date: "2026-03-26",
     content: `
